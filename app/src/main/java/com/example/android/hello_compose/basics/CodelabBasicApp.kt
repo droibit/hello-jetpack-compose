@@ -7,7 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.android.hello_compose.ui.theme.HelloComposeTheme
 
 @Composable
-fun BasicApp() {
+fun CodelabBasicApp() {
   HelloComposeTheme {
     Surface(color = Color.Yellow) {
       BasicScreenContent()
@@ -17,6 +17,6 @@ fun BasicApp() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewBasicApp() {
-  BasicApp()
+fun PreviewCodelabBasicApp() {
+  CodelabBasicApp()
 }
