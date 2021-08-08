@@ -5,7 +5,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.android.hello_compose.ui.theme.ComposeTutorialTheme
+import com.example.android.hello_compose.ui.theme.HelloComposeTheme
 
 @Composable
 fun Conversation(messages: List<Message>) {
@@ -27,7 +27,7 @@ fun Conversation(messages: List<Message>) {
 )
 @Composable
 fun PreviewConversation() {
-  ComposeTutorialTheme {
+  HelloComposeTheme {
     Conversation(messages = SampleData.conversationSample)
   }
 }
