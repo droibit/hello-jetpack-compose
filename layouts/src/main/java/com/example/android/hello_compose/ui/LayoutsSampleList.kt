@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.layouts
+package com.example.android.hello_compose.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
