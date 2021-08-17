@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.tutorial
+package com.example.android.hello_compose.ui
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface

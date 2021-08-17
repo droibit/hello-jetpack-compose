@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.tutorial
+package com.example.android.hello_compose.ui
 
 import android.content.res.Configuration
 import androidx.compose.animation.animateColorAsState
