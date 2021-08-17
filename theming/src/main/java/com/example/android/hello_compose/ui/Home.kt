@@ -41,8 +41,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.android.hello_compose.R
-import com.example.android.hello_compose.ui.data.Post
-import com.example.android.hello_compose.ui.data.PostRepo
+import com.example.android.hello_compose.data.Post
+import com.example.android.hello_compose.data.PostRepo
 import com.example.android.hello_compose.ui.theme.JetnewsTheme
 import java.util.Locale
 

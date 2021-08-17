@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.state
+package com.example.android.hello_compose.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,10 +26,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextAlign.Companion
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.android.hello_compose.state.TodoIcon
+import com.example.android.hello_compose.state.TodoIcon.Done
+import com.example.android.hello_compose.state.TodoIcon.Event
+import com.example.android.hello_compose.state.TodoIcon.Square
+import com.example.android.hello_compose.state.TodoItem
+import com.example.android.hello_compose.state.generateRandomTodoItem
 import kotlin.random.Random
 
 @Composable
@@ -101,10 +106,10 @@ fun TodoScreen(
 @Composable
 fun PreviewTodoScreen() {
   val items = listOf(
-    TodoItem("Learn compose", TodoIcon.Event),
+    TodoItem("Learn compose", Event),
     TodoItem("Take the codelab"),
-    TodoItem("Apply state", TodoIcon.Done),
-    TodoItem("Build dynamic UIs", TodoIcon.Square)
+    TodoItem("Apply state", Done),
+    TodoItem("Build dynamic UIs", Square)
   )
   TodoScreen(
     items,

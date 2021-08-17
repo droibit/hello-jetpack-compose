@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.state
+package com.example.android.hello_compose.ui
 
 import androidx.annotation.StringRes
 import androidx.compose.animation.AnimatedVisibility
@@ -44,6 +44,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.android.hello_compose.state.TodoIcon
+import com.example.android.hello_compose.state.TodoIcon.Square
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -129,7 +131,7 @@ fun SelectableIconButton(
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewIconRow() = IconRow(icon = TodoIcon.Square, onIconChange = {})
+fun PreviewIconRow() = IconRow(icon = Square, onIconChange = {})
 
 @Composable
 fun TodoItemInputBackground(
