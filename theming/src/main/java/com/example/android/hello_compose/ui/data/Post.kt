@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.theming.data
+package com.example.android.hello_compose.ui.data
 
 import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Immutable
