@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.basics
+package com.example.android.hello_compose.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
