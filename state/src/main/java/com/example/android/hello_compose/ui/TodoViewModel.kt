@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.example.android.hello_compose.state.TodoItem
+import com.example.android.hello_compose.data.TodoItem
 
 class TodoViewModel : ViewModel() {
 

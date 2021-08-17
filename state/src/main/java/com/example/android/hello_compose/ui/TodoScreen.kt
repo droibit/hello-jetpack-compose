@@ -29,12 +29,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.android.hello_compose.state.TodoIcon
-import com.example.android.hello_compose.state.TodoIcon.Done
-import com.example.android.hello_compose.state.TodoIcon.Event
-import com.example.android.hello_compose.state.TodoIcon.Square
-import com.example.android.hello_compose.state.TodoItem
-import com.example.android.hello_compose.state.generateRandomTodoItem
+import com.example.android.hello_compose.data.TodoIcon
+import com.example.android.hello_compose.data.TodoIcon.Done
+import com.example.android.hello_compose.data.TodoIcon.Event
+import com.example.android.hello_compose.data.TodoIcon.Square
+import com.example.android.hello_compose.data.TodoItem
+import com.example.android.hello_compose.data.generateRandomTodoItem
 import kotlin.random.Random
 
 @Composable

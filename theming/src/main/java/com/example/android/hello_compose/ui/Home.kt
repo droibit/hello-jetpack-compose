@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.theming
+package com.example.android.hello_compose.ui
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
@@ -41,6 +41,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.android.hello_compose.R
+import com.example.android.hello_compose.R.string
 import com.example.android.hello_compose.data.Post
 import com.example.android.hello_compose.data.PostRepo
 import com.example.android.hello_compose.ui.theme.JetnewsTheme
@@ -58,7 +59,7 @@ fun Home() {
     ) { innerPadding ->
       LazyColumn(contentPadding = innerPadding) {
         item {
-          Header(stringResource(R.string.top))
+          Header(stringResource(string.top))
         }
 
         item {

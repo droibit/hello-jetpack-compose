@@ -97,7 +97,6 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.android.hello_compose.R
-import com.example.android.hello_compose.animation.theme.AnimationCodelabTheme
 import com.example.android.common.theme.Amber600
 import com.example.android.common.theme.Green300
 import com.example.android.common.theme.Green800

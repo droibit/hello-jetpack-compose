@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.state
+package com.example.android.hello_compose.data
 
 fun generateRandomTodoItem(): TodoItem {
   val message = listOf(
