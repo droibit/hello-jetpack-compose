@@ -9,3 +9,4 @@ rootProject.name = "hello-compose"
 include ':app'
 include ':common'
 include ':tutorial'
+include ':animation'

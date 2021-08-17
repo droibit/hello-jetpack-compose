@@ -1,4 +1,4 @@
-package com.example.android.hello_compose.animation
+package com.example.android.hello_compose.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -115,7 +115,7 @@ private enum class TabPage {
 }
 
 @Composable
-fun AnimationHome() {
+fun Home() {
   // String resources.
   val allTasks = stringArrayResource(R.array.tasks)
   val allTopics = stringArrayResource(R.array.topics).toList()
@@ -666,6 +666,6 @@ private fun PreviewHomeTabBar() {
 @Composable
 private fun PreviewHome() {
   AnimationCodelabTheme {
-    AnimationHome()
+    Home()
   }
 }

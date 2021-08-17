@@ -1,5 +1,5 @@
 plugins {
-  id 'com.android.library'
+  id 'com.android.application'
   id 'kotlin-android'
 }
 
@@ -7,13 +7,16 @@ android {
   compileSdk rootProject.ext.compileSdk
 
   defaultConfig {
+    applicationId "com.example.android.hello_compose"
     minSdk rootProject.ext.minSdk
     targetSdk rootProject.ext.targetSdk
     versionCode 1
     versionName "1.0"
 
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    consumerProguardFiles "consumer-rules.pro"
+    vectorDrawables {
+      useSupportLibrary true
+    }
   }
 
   buildTypes {
@@ -31,17 +34,29 @@ android {
     useIR = true
   }
   buildFeatures {
-    buildConfig = false
     compose true
   }
   composeOptions {
     kotlinCompilerExtensionVersion compose_version
     kotlinCompilerVersion kotlin_version
   }
+  packagingOptions {
+    resources {
+      excludes += '/META-INF/{AL2.0,LGPL2.1}'
+    }
+  }
 }
 
 dependencies {
+  implementation project(":common")
+
+  implementation "androidx.core:core-ktx:$coreKtx_version"
+  implementation "androidx.appcompat:appcompat:$app_compat_version"
   implementation "com.google.android.material:material:$mdc_version"
   implementation "androidx.compose.ui:ui:$compose_version"
   implementation "androidx.compose.material:material:$compose_version"
+  implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+  implementation "androidx.activity:activity-compose:$activity_version"
+
+  debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 }
