@@ -98,11 +98,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.android.hello_compose.R
 import com.example.android.hello_compose.animation.theme.AnimationCodelabTheme
-import com.example.android.hello_compose.ui.theme.Amber600
-import com.example.android.hello_compose.ui.theme.Green300
-import com.example.android.hello_compose.ui.theme.Green800
-import com.example.android.hello_compose.ui.theme.Purple100
-import com.example.android.hello_compose.ui.theme.Purple700
+import com.example.android.common.theme.Amber600
+import com.example.android.common.theme.Green300
+import com.example.android.common.theme.Green800
+import com.example.android.common.theme.Purple100
+import com.example.android.common.theme.Purple700
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

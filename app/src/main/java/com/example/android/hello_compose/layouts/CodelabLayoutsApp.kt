@@ -11,7 +11,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.android.hello_compose.ui.theme.HelloComposeTheme
+import com.example.android.common.theme.HelloComposeTheme
 
 @Composable
 fun CodelabLayoutsApp() {

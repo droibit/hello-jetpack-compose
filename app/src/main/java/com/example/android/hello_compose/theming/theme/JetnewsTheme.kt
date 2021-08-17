@@ -6,11 +6,11 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import com.example.android.hello_compose.ui.theme.Red200
-import com.example.android.hello_compose.ui.theme.Red300
-import com.example.android.hello_compose.ui.theme.Red700
-import com.example.android.hello_compose.ui.theme.Red800
-import com.example.android.hello_compose.ui.theme.Red900
+import com.example.android.common.theme.Red200
+import com.example.android.common.theme.Red300
+import com.example.android.common.theme.Red700
+import com.example.android.common.theme.Red800
+import com.example.android.common.theme.Red900
 
 private val LightColors = lightColors(
   primary = Red700,

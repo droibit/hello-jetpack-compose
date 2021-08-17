@@ -10,7 +10,7 @@ import androidx.compose.ui.layout.layout
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.android.hello_compose.ui.theme.HelloComposeTheme
+import com.example.android.common.theme.HelloComposeTheme
 
 fun Modifier.firstBaselineToTop(
   firstBaselineToTop: Dp

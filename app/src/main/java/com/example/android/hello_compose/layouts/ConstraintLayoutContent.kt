@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
-import com.example.android.hello_compose.ui.theme.HelloComposeTheme
+import com.example.android.common.theme.HelloComposeTheme
 
 @Composable
 fun ConstraintLayoutContent() {

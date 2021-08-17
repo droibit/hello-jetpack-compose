@@ -3,7 +3,7 @@ package com.example.android.hello_compose.tutorial
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import com.example.android.hello_compose.ui.theme.HelloComposeTheme
+import com.example.android.common.theme.HelloComposeTheme
 
 @Composable
 fun TutorialApp() {
