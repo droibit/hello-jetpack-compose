@@ -15,5 +15,8 @@ val Red800 = Color(0xffd00036)
 val Red900 = Color(0xffc20029)
 
 val Green300 = Color(0xFF81C784)
+val Green500 = Color(0xFF1EB980)
 val Green800 = Color(0xFF2E7D32)
 val Amber600 = Color(0xFFFFB300)
+
+val DarkBlue900 = Color(0xFF26282F)
