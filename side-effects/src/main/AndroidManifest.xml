@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.hello_compose">
+
+    <!--
+      Android 11 package visibility changes require that apps specify which
+      set of other packages on the device that they can access. Since this
+      sample uses Google Maps, specifying the Google Maps package name is
+      required so that the buttons on the Map toolbar launch the Google Maps app.
+    -->
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Crane">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.details.DetailsActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
