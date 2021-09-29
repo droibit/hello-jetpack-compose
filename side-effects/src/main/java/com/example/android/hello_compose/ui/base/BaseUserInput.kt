@@ -53,10 +53,7 @@ fun CraneUserInput(
     tintIcon = { text.isNotEmpty() },
     tint = tint
   ) {
-    Text(
-      text = text,
-      style = MaterialTheme.typography.body1.copy(color = tint)
-    )
+    Text(text = text, style = MaterialTheme.typography.body1.copy(color = tint))
   }
 }
 

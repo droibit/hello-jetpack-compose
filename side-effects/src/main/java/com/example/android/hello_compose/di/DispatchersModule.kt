@@ -28,9 +28,9 @@ import javax.inject.Qualifier
 @InstallIn(SingletonComponent::class)
 class DispatchersModule {
 
-    @Provides
-    @DefaultDispatcher
-    fun provideDefaultDispatcher(): CoroutineDispatcher = Dispatchers.Default
+  @Provides
+  @DefaultDispatcher
+  fun provideDefaultDispatcher(): CoroutineDispatcher = Dispatchers.Default
 }
 
 @Retention(AnnotationRetention.BINARY)
