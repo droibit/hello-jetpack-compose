@@ -21,6 +21,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ShareCompat
 import androidx.core.widget.NestedScrollView
@@ -29,11 +30,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.composethemeadapter.MdcTheme
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.samples.apps.sunflower.R
 import com.google.samples.apps.sunflower.data.Plant
 import com.google.samples.apps.sunflower.databinding.FragmentPlantDetailBinding
+import com.google.samples.apps.sunflower.plantdetail.PlantDetailFragment.Callback
 import com.google.samples.apps.sunflower.utilities.InjectorUtils
 import com.google.samples.apps.sunflower.viewmodels.PlantDetailViewModel
 
@@ -58,19 +61,16 @@ class PlantDetailFragment : Fragment() {
         ).apply {
             viewModel = plantDetailViewModel
             lifecycleOwner = viewLifecycleOwner
-            callback = object : Callback {
-                override fun add(plant: Plant?) {
-                    plant?.let {
-                        hideAppBarFab(fab)
-                        plantDetailViewModel.addPlantToGarden()
-                        Snackbar.make(root, R.string.added_plant_to_garden, Snackbar.LENGTH_LONG)
-                            .show()
-                    }
+            callback = Callback { plant ->
+                plant?.let {
+                    hideAppBarFab(fab)
+                    plantDetailViewModel.addPlantToGarden()
+                    Snackbar.make(root, R.string.added_plant_to_garden, Snackbar.LENGTH_LONG)
+                        .show()
                 }
             }
 
             var isToolbarShown = false
-
             // scroll change listener begins at Y = 0 when image is fully collapsed
             plantDetailScrollview.setOnScrollChangeListener(
                 NestedScrollView.OnScrollChangeListener { _, _, scrollY, _, _ ->
@@ -104,6 +104,26 @@ class PlantDetailFragment : Fragment() {
                         true
                     }
                     else -> false
+                }
+            }
+
+            composeView.apply {
+                // By default, the Composition is disposed when ComposeView is detached
+                // from the window. This causes problems during transitions as the ComposeView
+                // will still be visible on the screen after it's detached from the window.
+                // Instead, to dispose the Composition when the Fragment view lifecycle is
+                // destroyed, we set the DisposeOnViewTreeLifecycleDestroyed strategy as the
+                // ViewCompositionStrategy for this ComposeView
+                setViewCompositionStrategy(
+                    ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
+                )
+
+                setContent {
+
+                    // You're in Compose world!
+                    MdcTheme {
+                        PlantDetailDescription(plantDetailViewModel)
+                    }
                 }
             }
         }
@@ -142,7 +162,7 @@ class PlantDetailFragment : Fragment() {
         fab.hide()
     }
 
-    interface Callback {
+    fun interface Callback {
         fun add(plant: Plant?)
     }
 }
